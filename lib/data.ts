@@ -18,7 +18,7 @@ export const projects: Project[] = [
   ["Kickstarter Dragon Kit", "Segmented fantasy statue kit engineered for campaign previews and fulfillment.", "Blender", "Kickstarter"],
   ["Mascot Toy Prototype", "Clean mascot sculpt with toy-manufacturing sensibility and appealing volumes.", "ZBrush", "Prototype"],
   ["Resin Hero Garage Kit", "Hero sculpt split into keyed parts with supported detail density for resin output.", "Blender", "Resin"]
-].map(([title, description, software, tag], index) => ({ title, description, image: `/projects/project-${index + 1}.svg`, software: [software], tags: [tag, "Print-ready"] }));
+].map(([title, description, software, tag], index) => ({ title, description, image: `/projects/project-${index + 1}.png`, software: [software], tags: [tag, "Print-ready"] }));
 
 export const services: Service[] = [
   { title: "Character Sculpting", description: "Hero characters, stylized figures, and expressive sculpts built from brief, concept, or reference pack.", features: ["Clean anatomy", "Strong silhouettes", "Production presentation"] },
