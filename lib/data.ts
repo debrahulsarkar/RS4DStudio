@@ -7,7 +7,7 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const skills = ["ZBrush", "Blender", "Maya", "Character Design", "Collectible Sculpting", "3D Printing", "Anatomy", "Hard Surface"];
+export const skills = ["ZBrush", "Character Design", "Collectible Sculpting", "3D Printing", "Anatomy", "Hard Surface"];
 
 export const projects: Project[] = [
   ["Solar Ronin Statue", "Stylized warrior sculpt prepared for collectible production and resin test prints.", "ZBrush", "Statue"],
