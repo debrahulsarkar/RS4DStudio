@@ -1,46 +1,54 @@
-import type { FAQ, Project, Service } from "@/types";
+import type { FAQItem, PortfolioProject, Service, Testimonial } from "@/types";
 
 export const navItems = [
-  { label: "Work", href: "#portfolio" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", href: "/#portfolio" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/start-project" },
 ];
 
-export const skills = ["ZBrush", "Character Design", "Collectible Sculpting", "3D Printing", "Anatomy", "Hard Surface"];
+export const skills = ["ZBrush", "Blender", "Maya", "Character Design", "Collectible Sculpting", "3D Printing", "Anatomy", "Hard Surface"];
 
-export const projects: Project[] = [
-  ["Solar Ronin Statue", "Stylized warrior sculpt prepared for collectible production and resin test prints.", "ZBrush", "Statue"],
-  ["Apex Creature Bust", "Creature anatomy study with production-friendly forms and clean surface transitions.", "ZBrush", "Creature"],
-  ["Arcade Mage Miniature", "Tabletop character optimized for readable silhouette and resin durability.", "Maya", "Miniature"],
-  ["Cyber Idol Figurine", "Collectible figure with hard-surface accessories and stylized hair sculpting.", "Blender", "Toy"],
-  ["Titan Pilot Character", "Game-ready sculpt focused on heroic proportions, armor polish, and presentation renders.", "Maya", "Game"],
-  ["Kickstarter Dragon Kit", "Segmented fantasy statue kit engineered for campaign previews and fulfillment.", "Blender", "Kickstarter"],
-  ["Mascot Toy Prototype", "Clean mascot sculpt with toy-manufacturing sensibility and appealing volumes.", "ZBrush", "Prototype"],
-  ["Resin Hero Garage Kit", "Hero sculpt split into keyed parts with supported detail density for resin output.", "Blender", "Resin"]
-].map(([title, description, software, tag], index) => ({ title, description, image: `/projects/project-${index + 1}.png`, software: [software], tags: [tag, "Print-ready"] }));
+const projectRows: [string, string, string, string[], string[]][] = [
+  ["Solar Ronin Statue", "A premium stylized warrior sculpt prepared for collectible production and resin test prints.", "/projects/project-1.svg", ["ZBrush", "KeyShot"], ["Statue", "Stylized", "Print-ready"]],
+  ["Apex Creature Bust", "Creature anatomy study with production-friendly forms, detachable keys, and clean surface transitions.", "/projects/project-2.svg", ["ZBrush", "Blender"], ["Creature", "Bust", "Anatomy"]],
+  ["Arcade Mage Miniature", "Tabletop-scale character optimized for readable silhouette, cloak flow, and resin durability.", "/projects/project-3.svg", ["ZBrush", "Maya"], ["Miniature", "Fantasy", "STL"]],
+  ["Cyber Idol Figurine", "High-energy collectible figure with hard-surface accessories and stylized hair sculpting.", "/projects/project-4.svg", ["ZBrush", "Blender"], ["Figurine", "Hard Surface", "Toy"]],
+  ["Titan Pilot Character", "Game-ready character sculpt pass focused on heroic proportions, armor polish, and presentation renders.", "/projects/project-5.svg", ["ZBrush", "Maya"], ["Game", "Armor", "Character"]],
+  ["Kickstarter Dragon Kit", "Segmented fantasy statue kit engineered for campaign previews, print orientation, and fulfillment.", "/projects/project-6.svg", ["ZBrush", "Blender"], ["Kickstarter", "Dragon", "Keys"]],
+  ["Mascot Toy Prototype", "Clean mascot sculpt with toy-manufacturing sensibility, appealing volumes, and pose variants.", "/projects/project-7.svg", ["ZBrush", "Maya"], ["Toy", "Mascot", "Prototype"]],
+  ["Resin Hero Garage Kit", "Collectible-ready hero sculpt split into keyed parts with supported detail density for resin output.", "/projects/project-8.svg", ["ZBrush", "Blender"], ["Garage Kit", "Resin", "Collectible"]],
+];
+
+export const projects: PortfolioProject[] = projectRows.map(([title, description, image, software, tags]) => ({ title, description, image, software, tags }));
 
 export const services: Service[] = [
-  { title: "Character Sculpting", description: "Hero characters, stylized figures, and expressive sculpts built from brief, concept, or reference pack.", features: ["Clean anatomy", "Strong silhouettes", "Production presentation"] },
-  { title: "Collectible Design", description: "Premium statue concepts shaped for shelf impact, manufacturable parts, and collector-grade detail.", features: ["Pose exploration", "Base design", "Part separation"] },
-  { title: "Miniature Sculpting", description: "Readable tabletop miniatures with crisp forms, sturdy proportions, and scale-aware details.", features: ["28-75mm scale", "Faction sets", "Print-safe thickness"] },
-  { title: "Creature Sculpting", description: "Original monsters, mascots, beasts, and creature busts with believable anatomy and appeal.", features: ["Creature anatomy", "Texture passes", "Dynamic posing"] },
-  { title: "3D Print Preparation", description: "Models prepared for resin printing, including cuts, keys, scale checks, and clean delivery files.", features: ["STL/OBJ export", "Keyed parts", "Watertight checks"] },
-  { title: "STL Optimization", description: "Repair, polish, decimate, and optimize sculpt files for smoother printing and production handling.", features: ["File cleanup", "Detail preservation", "Print workflow"] }
+  { title: "Character Sculpting", slug: "character-sculpting", description: "Hero characters, stylized figures, and expressive sculpts built from brief, concept, or reference pack.", features: ["Clean anatomy", "Strong silhouettes", "Production presentation"] },
+  { title: "Collectible Design", slug: "collectible-design", description: "Premium statue concepts shaped for shelf impact, manufacturable cuts, and collector-grade detail.", features: ["Pose exploration", "Base design", "Part separation"] },
+  { title: "Miniature Sculpting", slug: "miniature-sculpting", description: "Readable tabletop miniatures with crisp forms, sturdy proportions, and scale-aware detailing.", features: ["28-75mm scale", "Faction sets", "Print-safe thickness"] },
+  { title: "Creature Sculpting", slug: "creature-sculpting", description: "Original monsters, mascots, beasts, and creature busts with believable anatomy and character appeal.", features: ["Creature anatomy", "Texture passes", "Dynamic posing"] },
+  { title: "3D Print Preparation", slug: "3d-print-preparation", description: "Models prepared for resin printing, including cuts, keys, hollowing strategy, and clean delivery files.", features: ["STL/OBJ export", "Keyed parts", "Scale checks"] },
+  { title: "STL Optimization", slug: "stl-optimization", description: "Repair, polish, decimate, and optimize sculpt files for smoother printing and easier production handling.", features: ["Watertight meshes", "File cleanup", "Detail preservation"] },
 ];
 
-export const processSteps = ["Discussion", "Concept", "Sculpt", "Review", "Delivery"].map((title, index) => ({ title, description: ["We define scope, references, usage rights, scale, and production constraints.", "The idea becomes a direction through pose, proportion, mood, and surface language.", "The character is sculpted from blockout to refined anatomy, details, and accessories.", "You receive clear previews and revision passes before final handoff.", "Final files are prepared for presentation, print, manufacturing, or studio pipeline use."][index] }));
-
-export const testimonials = [
-  { quote: "RS4DStudio translated a rough mascot idea into a collectible-ready sculpt with campaign-level polish.", name: "Maya Ellis", role: "Creative Director" },
-  { quote: "The model printed beautifully. The cuts, keys, and detail density were clearly made for resin production.", name: "Jonas Park", role: "Resin Print Studio Owner" },
-  { quote: "Fast communication, strong anatomy, and presentation renders that helped our team get buy-in.", name: "Rafael Moretti", role: "Game Art Producer" }
+export const processSteps = [
+  { title: "Discussion", description: "We define scope, references, usage rights, target scale, and production constraints." },
+  { title: "Concept", description: "The idea becomes a direction through thumbnails, mood, pose, proportions, and surface language." },
+  { title: "Sculpt", description: "The character is sculpted in stages from blockout to refined anatomy, details, and accessories." },
+  { title: "Review", description: "You receive clear previews and revision passes so the final model lands exactly where it should." },
+  { title: "Delivery", description: "Final files are prepared for presentation, print, manufacturing handoff, or studio pipeline use." },
 ];
 
-export const faqs: FAQ[] = [
-  { question: "What file formats do you deliver?", answer: "Typical delivery includes STL, OBJ, ZTL, FBX, and blend files depending on project scope." },
-  { question: "Can you prepare for resin printing?", answer: "Yes. Models can be made watertight, split into keyed parts, checked for scale, and optimized for resin workflows." },
-  { question: "Commercial license?", answer: "Commercial usage can be included in the project agreement before sculpting starts." },
-  { question: "Revisions?", answer: "Projects include structured review milestones with clear preview renders and change lists." },
-  { question: "Delivery time?", answer: "Small busts and miniatures can take 1-3 weeks. Larger statue kits may take 4-8 weeks." }
+export const testimonials: Testimonial[] = [
+  { quote: "RS4DStudio translated a rough mascot idea into a collectible-ready sculpt with the kind of polish our campaign needed from day one.", name: "Maya Ellis", role: "Creative Director, indie toy launch" },
+  { quote: "The model printed beautifully. The cuts, keys, and detail density were clearly made by someone who understands resin production.", name: "Jonas Park", role: "Owner, resin print studio" },
+  { quote: "Fast communication, strong anatomy, and presentation renders that helped our team get buy-in before prototyping.", name: "Rafael Moretti", role: "Producer, game art vendor" },
+];
+
+export const faqs: FAQItem[] = [
+  { question: "What file formats do you deliver?", answer: "Typical delivery includes STL, OBJ, ZTL, FBX, and blend files depending on the project scope. Presentation renders can also be included." },
+  { question: "Can you prepare for resin printing?", answer: "Yes. Models can be made watertight, split into keyed parts, checked for scale, and optimized for resin printing workflows." },
+  { question: "Commercial license?", answer: "Commercial usage can be included in the project agreement. Licensing terms are defined before sculpting starts so ownership and usage are clear." },
+  { question: "Revisions?", answer: "Each project includes structured review milestones. Revision rounds depend on scope, but feedback is handled with preview renders and clear change lists." },
+  { question: "Delivery time?", answer: "Small busts and miniatures can take 1-3 weeks. Larger collectible statues or production kits may take 4-8 weeks depending on complexity." },
 ];
