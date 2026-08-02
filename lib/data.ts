@@ -10,14 +10,14 @@ export const navItems = [
 export const skills = ["ZBrush", "Blender", "Maya", "Character Design", "Collectible Sculpting", "3D Printing", "Anatomy", "Hard Surface"];
 
 const projectRows: [string, string, string, string[], string[]][] = [
-  ["Solar Ronin Statue", "A premium stylized warrior sculpt prepared for collectible production and resin test prints.", "/projects/project-1.svg", ["ZBrush", "KeyShot"], ["Statue", "Stylized", "Print-ready"]],
-  ["Apex Creature Bust", "Creature anatomy study with production-friendly forms, detachable keys, and clean surface transitions.", "/projects/project-2.svg", ["ZBrush", "Blender"], ["Creature", "Bust", "Anatomy"]],
-  ["Arcade Mage Miniature", "Tabletop-scale character optimized for readable silhouette, cloak flow, and resin durability.", "/projects/project-3.svg", ["ZBrush", "Maya"], ["Miniature", "Fantasy", "STL"]],
-  ["Cyber Idol Figurine", "High-energy collectible figure with hard-surface accessories and stylized hair sculpting.", "/projects/project-4.svg", ["ZBrush", "Blender"], ["Figurine", "Hard Surface", "Toy"]],
-  ["Titan Pilot Character", "Game-ready character sculpt pass focused on heroic proportions, armor polish, and presentation renders.", "/projects/project-5.svg", ["ZBrush", "Maya"], ["Game", "Armor", "Character"]],
-  ["Kickstarter Dragon Kit", "Segmented fantasy statue kit engineered for campaign previews, print orientation, and fulfillment.", "/projects/project-6.svg", ["ZBrush", "Blender"], ["Kickstarter", "Dragon", "Keys"]],
-  ["Mascot Toy Prototype", "Clean mascot sculpt with toy-manufacturing sensibility, appealing volumes, and pose variants.", "/projects/project-7.svg", ["ZBrush", "Maya"], ["Toy", "Mascot", "Prototype"]],
-  ["Resin Hero Garage Kit", "Collectible-ready hero sculpt split into keyed parts with supported detail density for resin output.", "/projects/project-8.svg", ["ZBrush", "Blender"], ["Garage Kit", "Resin", "Collectible"]],
+  ["Solar Ronin Statue", "A premium stylized warrior sculpt prepared for collectible production and resin test prints.", "/projects/project-1.png", ["ZBrush", "KeyShot"], ["Statue", "Stylized", "Print-ready"]],
+  ["Apex Creature Bust", "Creature anatomy study with production-friendly forms, detachable keys, and clean surface transitions.", "/projects/project-2.png", ["ZBrush", "Blender"], ["Creature", "Bust", "Anatomy"]],
+  ["Arcade Mage Miniature", "Tabletop-scale character optimized for readable silhouette, cloak flow, and resin durability.", "/projects/project-3.png", ["ZBrush", "Maya"], ["Miniature", "Fantasy", "STL"]],
+  ["Cyber Idol Figurine", "High-energy collectible figure with hard-surface accessories and stylized hair sculpting.", "/projects/project-4.png", ["ZBrush", "Blender"], ["Figurine", "Hard Surface", "Toy"]],
+  ["Titan Pilot Character", "Game-ready character sculpt pass focused on heroic proportions, armor polish, and presentation renders.", "/projects/project-5.png", ["ZBrush", "Maya"], ["Game", "Armor", "Character"]],
+  ["Kickstarter Dragon Kit", "Segmented fantasy statue kit engineered for campaign previews, print orientation, and fulfillment.", "/projects/project-6.png", ["ZBrush", "Blender"], ["Kickstarter", "Dragon", "Keys"]],
+  ["Mascot Toy Prototype", "Clean mascot sculpt with toy-manufacturing sensibility, appealing volumes, and pose variants.", "/projects/project-7.png", ["ZBrush", "Maya"], ["Toy", "Mascot", "Prototype"]],
+  ["Resin Hero Garage Kit", "Collectible-ready hero sculpt split into keyed parts with supported detail density for resin output.", "/projects/project-8.png", ["ZBrush", "Blender"], ["Garage Kit", "Resin", "Collectible"]],
 ];
 
 export const projects: PortfolioProject[] = projectRows.map(([title, description, image, software, tags]) => ({ title, description, image, software, tags }));
