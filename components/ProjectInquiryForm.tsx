@@ -21,13 +21,23 @@ const schema = z.object({
 type Values = z.infer<typeof schema>;
 type SubmitState = "idle" | "success" | "error";
 
-const inputClass = "focus-ring w-full rounded-[8px] border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-studio-accent";
+const inputClass =
+  "focus-ring w-full rounded-[8px] border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-studio-accent";
 
 export function ProjectInquiryForm({ initialProjectType, initialMessage }: { initialProjectType: string; initialMessage?: string }) {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<Values>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<Values>({
     resolver: zodResolver(schema),
-    defaultValues: { projectType: initialProjectType, message: initialMessage ?? "" },
+    defaultValues: {
+      projectType: initialProjectType,
+      budget: "",
+      message: initialMessage ?? "",
+    },
   });
 
   async function onSubmit(values: Values) {
@@ -50,10 +60,12 @@ export function ProjectInquiryForm({ initialProjectType, initialMessage }: { ini
       });
 
       const result = await response.json();
-      if (!response.ok || !result.success) throw new Error("Form submission failed.");
+      if (!response.ok || !result.success) {
+        throw new Error("Form submission failed.");
+      }
 
       setSubmitState("success");
-      reset({ projectType: initialProjectType, message: initialMessage ?? "" });
+      reset({ projectType: initialProjectType, budget: "", message: initialMessage ?? "" });
     } catch {
       setSubmitState("error");
     }
@@ -62,15 +74,19 @@ export function ProjectInquiryForm({ initialProjectType, initialMessage }: { ini
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="rounded-[8px] border border-white/10 bg-studio-card p-5 shadow-card sm:p-7" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Name" error={errors.name?.message}><input {...register("name")} className={inputClass} placeholder="Your name" autoComplete="name" /></Field>
-        <Field label="Email" error={errors.email?.message}><input {...register("email")} className={inputClass} placeholder="you@company.com" autoComplete="email" /></Field>
+        <Field label="Name" error={errors.name?.message}>
+          <input {...register("name")} className={inputClass} placeholder="Your name" autoComplete="name" />
+        </Field>
+        <Field label="Email" error={errors.email?.message}>
+          <input {...register("email")} className={inputClass} placeholder="you@company.com" autoComplete="email" />
+        </Field>
         <Field label="Project Type" error={errors.projectType?.message}>
           <select {...register("projectType")} className={cn(inputClass, "appearance-none")}>
             {projectTypeOptions.map((option) => <option key={option}>{option}</option>)}
           </select>
         </Field>
         <Field label="Budget" error={errors.budget?.message}>
-          <select {...register("budget")} className={cn(inputClass, "appearance-none")} defaultValue="">
+          <select {...register("budget")} className={cn(inputClass, "appearance-none")}>
             <option value="" disabled>Choose range</option>
             <option>$500 - $1,500</option>
             <option>$1,500 - $3,500</option>
