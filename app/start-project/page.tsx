@@ -34,7 +34,7 @@ export default async function StartProjectPage({ searchParams }: StartProjectPag
             <h1 className="text-balance text-4xl font-semibold tracking-[-0.035em] text-white sm:text-5xl lg:text-7xl">{selectedService.heading}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-studio-muted">{selectedService.description}</p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {startProjectServices.slice(0, 4).map((service) => (
+              {startProjectServices.map((service) => (
                 <a key={service.slug} href={`/start-project?service=${service.slug}`} className="focus-ring rounded-[8px] border border-white/10 bg-white/[0.035] px-4 py-3 text-sm text-studio-muted transition hover:border-orange-400/40 hover:text-white">
                   {service.title}
                 </a>
