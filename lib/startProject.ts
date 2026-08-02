@@ -1,9 +1,11 @@
 import { services } from "@/lib/data";
 import type { ServiceSlug } from "@/types";
 
+type StartProjectSlug = ServiceSlug | "general-inquiry";
+
 export type StartProjectConfig = {
   title: string;
-  slug: string;
+  slug: StartProjectSlug;
   heading: string;
   description: string;
   template: string;
