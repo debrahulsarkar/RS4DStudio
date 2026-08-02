@@ -1,4 +1,5 @@
 import { services } from "@/lib/data";
+import type { ServiceSlug } from "@/types";
 
 export type StartProjectConfig = {
   title: string;
@@ -122,7 +123,7 @@ Model link:
 
 Additional notes:
 ...`,
-} satisfies Record<string, string>;
+} satisfies Record<ServiceSlug, string>;
 
 const descriptions = {
   "character-sculpting": "Tell me about the character, style, usage, scale, and references so I can shape a clear sculpting scope.",
@@ -131,7 +132,7 @@ const descriptions = {
   "creature-sculpting": "Describe the creature type, mood, anatomy direction, and references for an original sculpt.",
   "3d-print-preparation": "Send the model details and print-prep needs so I can plan cuts, keys, hollowing, scale, and orientation.",
   "stl-optimization": "Describe the STL issues, printer, desired output, and model link so I can optimize the file for production.",
-} satisfies Record<string, string>;
+} satisfies Record<ServiceSlug, string>;
 
 export const startProjectServices: StartProjectConfig[] = services.map((service) => ({
   title: service.title,
