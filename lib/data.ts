@@ -10,7 +10,7 @@ export const navItems = [
 export const skills = ["ZBrush", "Blender", "Maya", "Character Design", "Collectible Sculpting", "3D Printing", "Anatomy", "Hard Surface"];
 
 const projectRows: [string, string, string, string[], string[]][] = [
-  ["Solar Ronin Statue", "A premium stylized warrior sculpt prepared for collectible production and resin test prints.", "/projects/project-1.png", ["ZBrush", "KeyShot"], ["Statue", "Stylized", "Print-ready"]],
+  ["The Last Ascent", "Condemned to push the mountain's heart uphill for eternity, the wanderer no longer seeks freedom. The climb itself has become his purpose.", "/projects/project-1.png", ["ZBrush", "KeyShot"], ["Statue", "Realistic", "Print-ready"]],
   ["Apex Creature Bust", "Creature anatomy study with production-friendly forms, detachable keys, and clean surface transitions.", "/projects/project-2.png", ["ZBrush", "Blender"], ["Creature", "Bust", "Anatomy"]],
   ["Arcade Mage Miniature", "Tabletop-scale character optimized for readable silhouette, cloak flow, and resin durability.", "/projects/project-3.png", ["ZBrush", "Maya"], ["Miniature", "Fantasy", "STL"]],
   ["Cyber Idol Figurine", "High-energy collectible figure with hard-surface accessories and stylized hair sculpting.", "/projects/project-4.png", ["ZBrush", "Blender"], ["Figurine", "Hard Surface", "Toy"]],
