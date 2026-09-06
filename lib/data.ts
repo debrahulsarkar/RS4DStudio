@@ -40,7 +40,7 @@ export const processSteps = [
 ];
 
 export const testimonials: Testimonial[] = [
-  { quote: "RS4DStudio translated a rough mascot idea into a collectible-ready sculpt with the kind of polish our campaign needed from day one.", name: "Maya Ellis", role: "Creative Director, indie toy launch" },
+  { quote: "Fast, meticulous work with a level of quality that exceeded my expectations. Working with Rahul is a pleasure—I highly recommend him to anyone! :) I have other projects in the works, and I wouldn't hesitate to use his services again in the future.", name: "thomas tril", role: "Creative Director, Kickstarter project" },
   { quote: "The model printed beautifully. The cuts, keys, and detail density were clearly made by someone who understands resin production.", name: "Jonas Park", role: "Owner, resin print studio" },
   { quote: "Fast communication, strong anatomy, and presentation renders that helped our team get buy-in before prototyping.", name: "Rafael Moretti", role: "Producer, game art vendor" },
 ];
