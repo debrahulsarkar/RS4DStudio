@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   creator: "RS4DStudio",
   openGraph: { title: "RS4DStudio | Premium 3D Character Sculpting", description: "Stylized and collectible-ready character sculpts for games, 3D printing, toys, Kickstarter campaigns, and production.", url: "https://rs4dstudio.vercel.app", siteName: "RS4DStudio", images: [{ url: "/og.svg", width: 1200, height: 630, alt: "RS4DStudio premium 3D character sculpting" }], locale: "en_US", type: "website" },
   twitter: { card: "summary_large_image", title: "RS4DStudio | Premium 3D Character Sculpting", description: "Collectible-ready sculpting for games, statues, miniatures, and 3D printing.", images: ["/og.svg"] },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" }
+  icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" }
 };
 
 export const viewport: Viewport = { themeColor: "#090909", colorScheme: "dark" };
