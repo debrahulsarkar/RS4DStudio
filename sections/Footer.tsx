@@ -36,7 +36,13 @@ export function Footer() {
     className="focus-ring inline-flex size-10 items-center justify-center rounded-full border border-white/10 text-studio-muted transition hover:border-orange-400/40 hover:text-studio-accent"
     aria-label="WhatsApp"
   >
-    <span className="text-sm font-bold" aria-hidden="true">WA</span>
+    <img
+  src="/whatsapp.svg"
+  alt=""
+  width={18}
+  height={18}
+  aria-hidden="true"
+/>
   </a>
 
   <a
