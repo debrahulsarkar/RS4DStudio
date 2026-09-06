@@ -13,7 +13,7 @@ export function Hero() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-4 py-2 text-sm text-studio-muted"><Sparkles size={16} className="text-studio-accent" aria-hidden="true" />Premium sculpts for production, print, and launch campaigns</div>
           <h1 className="text-balance max-w-5xl text-5xl font-semibold tracking-[-.045em] text-white sm:text-6xl lg:text-8xl">We Create High-Quality 3D Character Sculptures</h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-studio-muted sm:text-xl">Stylized and collectible-ready character sculpts for games, 3D printing, and production.</p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row"><Button href="#portfolio">View Portfolio <ArrowRight size={17} aria-hidden="true" /></Button><Button href="/start-project" variant="secondary">Hire Me</Button></div>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row"><Button href="#portfolio">View Portfolio <ArrowRight size={17} aria-hidden="true" /></Button><Button href="/start-project" variant="secondary">Get a Quote</Button></div>
         </div>
         <div className="relative mx-auto hidden w-full max-w-[30rem] lg:block">
           <div className="absolute -inset-8 rounded-full bg-studio-accent/20 blur-3xl" aria-hidden="true" />
