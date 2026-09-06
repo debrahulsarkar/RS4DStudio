@@ -50,5 +50,5 @@ export const faqs: FAQItem[] = [
   { question: "Can you prepare for resin printing?", answer: "Yes. Models can be made watertight, split into keyed parts, checked for scale, and optimized for resin printing workflows." },
   { question: "Commercial license?", answer: "Commercial usage can be included in the project agreement. Licensing terms are defined before sculpting starts so ownership and usage are clear." },
   { question: "Revisions?", answer: "Each project includes structured review milestones. Revision rounds depend on scope, but feedback is handled with preview renders and clear change lists." },
-  { question: "Delivery time?", answer: "Small busts and miniatures can take 1-3 weeks. Larger collectible statues or production kits may take 4-8 weeks depending on complexity." },
+  { question: "Delivery time?", answer: "Small busts and miniatures can take 3-5 Days. Larger collectible statues or production kits may take 1-4 weeks depending on complexity." },
 ];
