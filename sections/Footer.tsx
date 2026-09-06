@@ -37,7 +37,7 @@ export function Footer() {
     aria-label="WhatsApp"
   >
     <img
-  src="/whatsapp.svg"
+  src="/whatsapp-icon.svg"
   alt=""
   width={18}
   height={18}
