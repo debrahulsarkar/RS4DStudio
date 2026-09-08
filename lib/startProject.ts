@@ -16,8 +16,6 @@ const templates = {
 
 I would like a custom character sculpt.
 
-Concept / References:
-...
 
 Style:
 ...
