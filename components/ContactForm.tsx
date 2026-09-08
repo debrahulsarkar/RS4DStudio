@@ -75,6 +75,7 @@ export function ContactForm() {
         <Field label="Budget" error={errors.budget?.message}>
           <select {...register("budget")} className={cn(inputClass, "appearance-none")} defaultValue="">
             <option value="" disabled>Choose range</option>
+            <option>$0 - $500</option>
             <option>$500 - $1,500</option>
             <option>$1,500 - $3,500</option>
             <option>$3,500 - $7,500</option>
