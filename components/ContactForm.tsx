@@ -78,7 +78,8 @@ export function ContactForm() {
             <option>$0 - $500</option>
             <option>$500 - $1,500</option>
             <option>$1,500 - $3,500</option>
-            <option>$3,500+</option>
+            <option>$3,500 - $7,500</option>
+            <option>$7,500+</option>
           </select>
         </Field>
         <Field label="Message" error={errors.message?.message} className="sm:col-span-2">
