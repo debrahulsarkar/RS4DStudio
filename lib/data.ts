@@ -16,7 +16,7 @@ const projectRows: [string, string, string, string[], string[]][] = [
   ["Ghostwind", "Said to appear only before great change, the white stallion leaves no footprints behind—only silence.", "/projects/project-4.png", ["ZBrush", "Blender"], ["Figurine", "Hard Surface","Collectible" ]],
   ["Midnight Rebel", "Expressive stylized bust emphasizing facial anatomy, personality, and presentation-quality sculpting.", "/projects/project-5.png", ["ZBrush"], ["bust", "Expression", "Character"]],
   ["Broadcast Error", "They built him to entertain millions. One day, he looked beyond the screen—and decided he'd had enough.", "/projects/project-6.png", ["ZBrush", "Blender"], ["Kickstarter", "Dragon", "Keys"]],
-  ["Clockwork Courier", "Built to deliver hope during the final days of civilization, it continues its journey centuries after forgetting who sent it.", "/projects/project-7.png", ["ZBrush"], ["Resin", "Statue", "Collectible"]],
+  ["Zelot, the Chainbound", "Once sworn to the sacred order, Zelot was condemned to bear its chains. Now he wields his punishment as a weapon against those who threaten the realm.", "/projects/project-7.png", ["ZBrush"], ["Resin", "Statue", "Collectible"]],
   ["The Silent Witness", "Every empire believed the raven belonged to them. Yet when the kingdoms fell, it remained, watching the next chapter begin.", "/projects/project-8.png", ["ZBrush", "Blender"], ["Echofeather", "Resin", "Collectible"]],
 ];
 
